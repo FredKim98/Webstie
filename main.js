@@ -31,7 +31,7 @@ Vue.component('Book', {
           <h1>{{ Book }}</h1>
           <p v-if="inStock">In Stock</p>
           <p v-else>Out of Stock</p>
-          <p>Shipping: {{ shipping }}</p>
+          <p>Price: {{ Price }}</p>
 
           <Book_details :details="details"></Book_details>
 
@@ -95,7 +95,7 @@ Vue.component('Book', {
         inStock(){
             return this.variants[this.selectedVariant].variantQuantity
         },
-        shipping() {
+        Price() {
           if (this.Membership) {
             return "8.00"
           }
