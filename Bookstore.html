@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+<title>Bookstore</title>    
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <input type="datetime-local" name="starttime">
+    <div class="ball"></div>
+    <script>
+      const ballElement = document.querySelector(".ball");
+
+      window.addEventListener("click", function (e) {
+        console.log(e.clientX, e.clientY);
+        ballElement.style.transform = `translate(${e.clientX -15}px,${e.clientY - 15}px )`;
+      });
+
+
+      ballElement.addEventListener('transitionend', function(e){
+          ballElement.classList.add('end');
+          console.log(e.elapsedTime);
+          console.log(e.propertyName);
+      })
+    </script>
+<div id="app">
+  <Book :Membership="Membership"></Book>
+</div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>          
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+  background-color:blanchedalmond;  
+  margin: 0px;
+}
+
+.header {
+  font-size: 300%;
+}
+
+.Book {
+  display: flex;
+}
+
+img {
+  width: 80%;
+  margin: 50px;
+}
+
+.Book_image {
+  flex-basis: 480px;
+}
+
+.Book_info {
+  margin-top: 10px;
+  flex-basis: 500px;
+}
+
+.color-box {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+}
+
+.cart {
+  background-color:black;
+  float: right;
+  height: 50px;
+  width: 130px;
+  color: white;
+  font-size: 20px;
+  
+}
+
+button {    
+  background-color:black;
+  color: white;
+  height: 50px;
+  width: 130px;
+  font-size: 20px;
+} 
+
+.ball {
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: red;
+  transition: 1s;
+}
+.ball.end{
+    background: dodgerblue;
+}
+
+.Book {
+  font-size: 150%;
+  transition-property: font-size;
+  transition-duration: 2s;
+}
+.Book:hover {
+  font-size: 180%;
+  color: red;
+}
+
